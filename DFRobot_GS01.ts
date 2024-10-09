@@ -108,9 +108,10 @@ namespace DFRobot_GS01 {
         return writeIHoldingReg(REG_GS01_GESTURE_SCORE_THRESHOLD, score)
 
     }
-    //% block
-    export function begin(addr: number): void {
-        _addr = addr
+    //% block="begin"
+    //% weight=99
+    export function begin(): void {
+        _addr = 0x72
     }
 
 
@@ -132,26 +133,29 @@ namespace DFRobot_GS01 {
         return reaInputdReg(REG_GS01_VID)
     }
     /**
-     * TODO: Get the number of faces
+     *  Get the number of faces
      */
-    //% block
+    //% block="getFaceNumber"
+    //% weight=95
     export function getFaceNumber(): number {
 
         return reaInputdReg(REG_GS01_FACE_NUMBER)
     }
 
     /**
-     * TODO: Get face X-coordinate
+     * Get face X-coordinate
      */
-    //% block
+    //% block="getFaceLocationX"
+    //% weight=90
     export function getFaceLocationX(): number {
 
         return reaInputdReg(REG_GS01_FACE_LOCATION_X)
     }
     /**
-     * TODO: Get face Y-coordinate
+     *  Get face Y-coordinate
      */
-    //% block
+    //% block="getFaceLocationY"
+    //% weight=89
     export function getFaceLocationY(): number {
 
         return reaInputdReg(REG_GS01_FACE_LOCATION_Y)
@@ -162,9 +166,10 @@ namespace DFRobot_GS01 {
         return reaInputdReg(REG_GS01_FACE_SCORE)
     }
     /**
-     * TODO: Get gesture type
+     * Get gesture type
      */
-    //% block
+    //% block="getGestureType"
+    //% weight=97
     export function getGestureType(): number {
 
         return reaInputdReg(REG_GS01_GESTURE_TYPE)

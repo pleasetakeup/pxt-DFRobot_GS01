@@ -1,7 +1,7 @@
 {
-  "pxt-DFRobot_GS01.begin": "GS01遠距離手勢傳感器 初始化 I2C模式 地址 0x72.",
-  "pxt-DFRobot_GS01.getGestureType": "獲取手勢類型.",
-  "pxt-DFRobot_GS01.getFaceNumber": "獲取人臉的數量.",
-  "pxt-DFRobot_GS01.getFaceLocationX": "獲取人臉X坐標.",
-  "pxt-DFRobot_GS01.getFaceLocationY": "獲取人臉Y坐標",
+  "DFRobot_GS01.begin": "初始化模块的I2C地址以及相关配置",
+  "DFRobot_GS01.getGestureType": "获取识别到的手势类型，如果获取成功，产品上的RGB灯会亮起对应的颜色.",
+  "DFRobot_GS01.getFaceNumber": "获取当前镜头内识别到的人脸数量，如果数量大于0的话，产品上白色的LED灯会亮起",
+  "DFRobot_GS01.getFaceLocationX": "获取人脸在镜头里的X坐标位置",
+  "DFRobot_GS01.getFaceLocationY": "获取人脸在镜头里的Y坐标位置"
  }

@@ -1,0 +1,7 @@
+{
+    "DFRobot_GS01.begin|block": "Initializes the I2C address of the module and related configurations",
+    "DFRobot_GS01.getGestureType|block": "Take the recognized gesture type, if successful, the RGB light on the product will light up the corresponding color.",
+    "DFRobot_GS01.getFaceNumber|block": "Get the number of faces recognized in the current lens, if the number is greater than 0, the white LED light on the product will light up.",
+    "DFRobot_GS01.getFaceLocationX|block": "Get the X-coordinate position of the face in the shot",
+    "DFRobot_GS01.getFaceLocationY|block": "Get the Y-coordinate position of the face in the shot"
+}
