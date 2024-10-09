@@ -141,8 +141,9 @@ namespace DFRobot_GS01 {
     //% block="Get the number of faces."
     //% weight=95
     export function getFaceNumber(): number {
-
-        return reaInputdReg(REG_GS01_FACE_NUMBER)
+        let value = reaInputdReg(REG_GS01_FACE_NUMBER)
+        if (value > 20) value == 0
+        return value
     }
 
     /**
@@ -174,8 +175,9 @@ namespace DFRobot_GS01 {
     //% block="Get gesture type"
     //% weight=97
     export function getGestureType(): number {
-
-        return reaInputdReg(REG_GS01_GESTURE_TYPE)
+        let value = reaInputdReg(REG_GS01_GESTURE_TYPE)
+        if (value > 10) value == 0
+        return value
     }
     export function getGestureScore(): number {
 
@@ -188,7 +190,7 @@ namespace DFRobot_GS01 {
     export function readReg(reg: number): number {
 
 
-        let sendBuffer = pins.createBuffer(6)
+        let sendBuffer = pins.createBuffer(2)
 
         sendBuffer[0] = reg >> 8
         sendBuffer[1] = reg & 0xff
@@ -196,12 +198,15 @@ namespace DFRobot_GS01 {
         pins.i2cWriteBuffer(_addr, sendBuffer)
         basic.pause(50)//10 ms
         let lenBuf = pins.i2cReadBuffer(_addr, 2)
-        let value = lenBuf[1] << 8 | lenBuf[0]
+        let value = lenBuf[0]<<8 | lenBuf[1] 
+
+
+        
         return value
     }
 
     export function wirteReg(reg: number, data: number): boolean {
-        let sendBuffer = pins.createBuffer(6)
+        let sendBuffer = pins.createBuffer(4)
         sendBuffer[0] = reg >> 8
         sendBuffer[1] = reg & 0xff
         sendBuffer[2] = data >> 8
