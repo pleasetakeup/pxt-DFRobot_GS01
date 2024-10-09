@@ -108,7 +108,10 @@ namespace DFRobot_GS01 {
         return writeIHoldingReg(REG_GS01_GESTURE_SCORE_THRESHOLD, score)
 
     }
-    //% block="begin"
+    /**
+     * Initializes the I2C address of the module and related configurations
+     */
+    //% block="GS01 Long-distance Gesture Sensor Initialize I2C Mode Address 0x72. "
     //% weight=99
     export function begin(): void {
         _addr = 0x72
@@ -133,9 +136,9 @@ namespace DFRobot_GS01 {
         return reaInputdReg(REG_GS01_VID)
     }
     /**
-     *  Get the number of faces
+     *  Get the number of faces recognized in the current lens, if the number is greater than 0, the white LED light on the product will light up.
      */
-    //% block="getFaceNumber"
+    //% block="Get the number of faces."
     //% weight=95
     export function getFaceNumber(): number {
 
@@ -143,18 +146,18 @@ namespace DFRobot_GS01 {
     }
 
     /**
-     * Get face X-coordinate
+     * Get the X-coordinate position of the face in the shot
      */
-    //% block="getFaceLocationX"
+    //% block="Get face X-coordinate"
     //% weight=90
     export function getFaceLocationX(): number {
 
         return reaInputdReg(REG_GS01_FACE_LOCATION_X)
     }
     /**
-     *  Get face Y-coordinate
+     *  Get the Y-coordinate position of the face in the shot
      */
-    //% block="getFaceLocationY"
+    //% block="Get face Y-coordinate"
     //% weight=89
     export function getFaceLocationY(): number {
 
@@ -166,9 +169,9 @@ namespace DFRobot_GS01 {
         return reaInputdReg(REG_GS01_FACE_SCORE)
     }
     /**
-     * Get gesture type
+     * Take the recognized gesture type, if successful, the RGB light on the product will light up the corresponding color.
      */
-    //% block="getGestureType"
+    //% block="Get gesture type"
     //% weight=97
     export function getGestureType(): number {
 

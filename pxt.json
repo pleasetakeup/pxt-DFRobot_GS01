@@ -1,5 +1,5 @@
 {
-    "name": "pxt-DFRobot_GS01 - 複製",
+    "name": "DFRobot_GS01",
     "description": "",
     "dependencies": {
         "core": "*",
