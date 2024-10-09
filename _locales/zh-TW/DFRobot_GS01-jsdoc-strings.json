@@ -1,0 +1,7 @@
+{
+  "pxt-DFRobot_GS01.begin": "GS01遠距離手勢傳感器 初始化 I2C模式 地址 0x72.",
+  "pxt-DFRobot_GS01.getGestureType": "獲取手勢類型.",
+  "pxt-DFRobot_GS01.getFaceNumber": "獲取人臉的數量.",
+  "pxt-DFRobot_GS01.getFaceLocationX": "獲取人臉X坐標.",
+  "pxt-DFRobot_GS01.getFaceLocationY": "獲取人臉Y坐標",
+ }

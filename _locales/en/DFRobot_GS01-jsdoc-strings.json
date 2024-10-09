@@ -1,0 +1,6 @@
+{
+  "DFRobot_GS01.begin": "GS01 Long-distance Gesture Sensor Initialize I2C Mode Address 0x72.",
+  "DFRobot_GS01.getGestureType": "Get gesture type",
+  "DFRobot_GS01.getFaceNumber": "Get the number of faces.",
+  "DFRobot_GS01.getFaceLocationX": "Get face X-coordinate.",
+  "DFRobot_GS01.getFaceLocationY": "Get face Y-coordinate",
